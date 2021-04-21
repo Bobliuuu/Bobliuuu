@@ -1,6 +1,6 @@
 ### Hi! 👋
 
-I'm Jerry, a grade 11 student at Pierre Elliott Trudeau HS! Most of my repos are private rn, but I will update everything at some point :) 
+I'm Jerry, a grade 11 student at Pierre Elliott Trudeau HS! Most of my repos are private right now, but I will update everything at some point :) 
 
 <!--
 **Bobliuuu/Bobliuuu** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
