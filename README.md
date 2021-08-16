@@ -1,7 +1,6 @@
 ### Hi! 👋
 
-I'm Jerry, a grade 11 student at Pierre Elliott Trudeau HS! Most of my repos are private right now, but I will update everything at some point :) 
-
+I'm Jerry, a grade 11 student at Pierre Elliott Trudeau HS! I love going to hackathons and making random projects! 
 <!--
 Anyways, I would tell you a joke about UDP, but you probably wouldn't get it. 
 
