@@ -1,6 +1,6 @@
 ### Hi! 👋
 
-I'm Jerry, an incoming student at Computer Science @UWaterloo! I love going to hackathons and making cool projects! 
+I'm Jerry, an incoming student to Computer Science @UWaterloo! I love going to hackathons and making cool projects! 
 <!--
 Anyways, I would tell you a joke about UDP, but you probably wouldn't get it. 
 
