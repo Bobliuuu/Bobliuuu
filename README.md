@@ -1,6 +1,6 @@
-### Hi! 👋
+### Hi 👋
 
-I'm Jerry, a Computer Science student @UWaterloo! I love going to hackathons and making cool projects! 
+I play ultimate. That's about it 😂 Anything else you can find out through my portfolio projects. 
 <!--
 Anyways, I would tell you a joke about UDP, but you probably wouldn't get it. 
 
