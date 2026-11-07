@@ -4,7 +4,7 @@
 
 **CS + Pure Math @ University of Waterloo ('27** · Varsity Ultimate (Open B) · Software engineer on data, infra, and ML systems
 
-[Website](https://jerryzhu.org) · [LinkedIn](https://www.linkedin.com/in/jerry-zhu-/) · [Resume](https://jerryzhu.org/ZhuJerryResume.pdf)
+[Website](https://jerryzhu.org) · [LinkedIn](https://www.linkedin.com/in/jerryzhu2/) · [Resume](https://jerryzhu.org/ZhuJerryResume.pdf)
 
 </div>
 
