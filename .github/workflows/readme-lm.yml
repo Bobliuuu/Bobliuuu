@@ -1,0 +1,20 @@
+name: readme-lm
+on:
+  schedule: [{cron: "17 */3 * * *"}]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install numpy
+      - run: python3 readme-lm/gen.py assets/readme-lm.svg "$GITHUB_RUN_NUMBER"
+      - run: |
+          git config user.name "readme-lm[bot]"
+          git config user.email "readme-lm@users.noreply.github.com"
+          git add assets/readme-lm.svg
+          git diff --cached --quiet || git commit -m "chore: regenerate README-LM sample" && git push
