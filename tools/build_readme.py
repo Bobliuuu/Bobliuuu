@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Rebuilds the top of README.md (everything before the pure-Markdown QA menu) from a template.
-The QA menu and the weights block are copied through untouched. Usage: python3 tools/build_readme.py ORIG.md > README.md"""
+The QA menu and the weights block are copied through untouched. Usage: python3 tools/build_readme.py README.md > new.md   (the weights block is copied from the file you pass: pass the CURRENT README so a retrained model is never overwritten)"""
 import sys, urllib.parse as U
 orig = open(sys.argv[1]).read()
 tail = orig[orig.index("<!--LM-WEIGHTS-START-->"):]   # only the model's weights block stays in the README (the Action reads it)
