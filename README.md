@@ -1,6 +1,6 @@
 <div align="center">
 
-# Jerry Zhu
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg"><img src="assets/hero-light.svg" alt="Terminal animation: Jerry Zhu, CS and Pure Math at Waterloo, software engineer on data, infra and ML systems" width="100%"></picture>
 
 **CS + Pure Math @ University of Waterloo ('27** · Varsity Ultimate (Open B) · Software engineer on data, infra, and ML systems
 
@@ -8,63 +8,77 @@
 
 </div>
 
----
-
-## Now
+<img src="assets/hdr-now.svg" alt="Now" width="100%">
 
 - **Software Engineer @ StackAdapt**: Go, Rails, GraphQL; audience segmentation at million-record scale
 - **Compiling programs into transformer weights**: running real computation (a TPU, a RISC-V CPU, DOOM) inside stock Qwen3.5, no training
 - **Model compression**: the 10% Challenge, fitting a capable LLM into a tenth of its fp16 size
 - **UTMIST** (sparse attention research) · **WAT.ai** (PianoFi) · **WARG** (drone autonomy)
 
-## Featured work
+<img src="assets/hdr-experiments.svg" alt="Experiments" width="100%">
 
-| Project | What it is |
-|---|---|
-| [**qwentpu**](https://github.com/Bobliuuu/qwentpu) | A TPU compiled into the weights of a stock Qwen3.5. A language model that does exact matrix multiplication. |
-| [**qwen-os**](https://github.com/Bobliuuu/qwen-os) | A tiny OS that boots, opens a shell, and runs DOOM on a CPU living inside Qwen's weights. |
-| [**qwentensor**](https://github.com/Bobliuuu/qwentensor) | Write a PyTorch net, quantize it, run it *inside* Qwen3.5. The "program" is the prompt. |
-| [**qweninqwen**](https://github.com/Bobliuuu/qweninqwen) | A real Qwen3-0.6B token computed by the weights and recurrent state of another, stock Qwen. |
-| [**ten-percent-challenge**](https://github.com/Bobliuuu/ten-percent-challenge) | Shrinking a 7B model to ~10% of its bf16 size while keeping it useful. |
-| [**open-flapping-airplanes**](https://github.com/Bobliuuu/open-flapping-airplanes) | Reproducing the Flapping Airplanes megakernel (CUDA), in collaboration with Magni. |
-| [**allgit**](https://github.com/Bobliuuu/allgit) | Next-gen version control in Rust: one global object graph, independent zones, S3-backed remotes. |
-| [**bobliu-os**](https://github.com/Bobliuuu/bobliu-os) | From-scratch 32-bit x86 OS: preemptive multitasking, COW fork, VFS, libc, shell, Lua, DOOM. |
+<div align="center">
 
-## README-LM: ask a neural network that lives in this README
+<table>
+<tr><td width="50%"><a href="https://github.com/Bobliuuu/qwentpu"><img src="assets/card-qwentpu.svg" alt="qwentpu" width="100%"></a></td><td width="50%"><a href="https://github.com/Bobliuuu/qwen-os"><img src="assets/card-qwen-os.svg" alt="qwen-os" width="100%"></a></td></tr>
+<tr><td width="50%"><a href="https://github.com/Bobliuuu/qwentensor"><img src="assets/card-qwentensor.svg" alt="qwentensor" width="100%"></a></td><td width="50%"><a href="https://github.com/Bobliuuu/qweninqwen"><img src="assets/card-qweninqwen.svg" alt="qweninqwen" width="100%"></a></td></tr>
+<tr><td width="50%"><a href="https://github.com/Bobliuuu/ten-percent-challenge"><img src="assets/card-ten-percent-challenge.svg" alt="ten-percent-challenge" width="100%"></a></td><td width="50%"><a href="https://github.com/Bobliuuu/kvm"><img src="assets/card-kvm.svg" alt="kvm" width="100%"></a></td></tr>
+<tr><td width="50%"><a href="https://github.com/Bobliuuu/allgit"><img src="assets/card-allgit.svg" alt="allgit" width="100%"></a></td><td width="50%"><a href="https://github.com/Bobliuuu/bobliu-os"><img src="assets/card-bobliu-os.svg" alt="bobliu-os" width="100%"></a></td></tr>
+<tr><td width="50%"><a href="https://github.com/Bobliuuu/open-flapping-airplanes"><img src="assets/card-open-flapping-airplanes.svg" alt="open-flapping-airplanes" width="100%"></a></td><td width="50%"><a href="https://github.com/Bobliuuu/readme-lm"><img src="assets/card-readme-lm.svg" alt="readme-lm" width="100%"></a></td></tr>
+</table>
+
+</div>
+
+<img src="assets/hdr-interactive.svg" alt="Interactive" width="100%">
 
 <div align="center">
 <img src="assets/readme-lm.svg?v=337291d3" alt="Terminal animation of a tiny transformer answering a question about Jerry's GitHub" width="640">
 </div>
 
-**Click a question, hit Submit, get an answer:** [**what is qwentpu**](https://github.com/Bobliuuu/Bobliuuu/issues/new?title=ask%3A+what+is+qwentpu&body=Just+hit+Submit.+A+GitHub+Action+runs+the+model+stored+in+the+profile+README+and+replies+with+the+answer.) · [**which repo runs doom inside qwen**](https://github.com/Bobliuuu/Bobliuuu/issues/new?title=ask%3A+which+repo+runs+doom+inside+qwen&body=Just+hit+Submit.+A+GitHub+Action+runs+the+model+stored+in+the+profile+README+and+replies+with+the+answer.) · [**what is the ten percent challenge**](https://github.com/Bobliuuu/Bobliuuu/issues/new?title=ask%3A+what+is+the+ten+percent+challenge&body=Just+hit+Submit.+A+GitHub+Action+runs+the+model+stored+in+the+profile+README+and+replies+with+the+answer.) · [**what language is allgit written in**](https://github.com/Bobliuuu/Bobliuuu/issues/new?title=ask%3A+what+language+is+allgit+written+in&body=Just+hit+Submit.+A+GitHub+Action+runs+the+model+stored+in+the+profile+README+and+replies+with+the+answer.) · [**where does jerry study**](https://github.com/Bobliuuu/Bobliuuu/issues/new?title=ask%3A+where+does+jerry+study&body=Just+hit+Submit.+A+GitHub+Action+runs+the+model+stored+in+the+profile+README+and+replies+with+the+answer.) · [**what is qweninqwen**](https://github.com/Bobliuuu/Bobliuuu/issues/new?title=ask%3A+what+is+qweninqwen&body=Just+hit+Submit.+A+GitHub+Action+runs+the+model+stored+in+the+profile+README+and+replies+with+the+answer.)
+**README-LM: neural networks you can talk to from a README.** Three demos. Open an issue and a GitHub Action runs the network and replies. The profile bot's weights are in this very file, in the collapsed block at the bottom.
 
-Or write your own: open an issue titled `ask: <your question>`. A GitHub Action loads the model **straight out of this README**, runs the transformer in numpy, replies, and updates the animation above. It only knows Jerry's public GitHub (repos, projects, stack); anything else gets a polite refusal.
+<table>
+<tr>
+<td width="33%" valign="top"><img src="assets/demo-1.svg" alt="Demo 1" width="100%"><br>
+<a href="https://github.com/Bobliuuu/readme-lm/issues/new?template=gpt2.md&title=gpt2%3A+The+meaning+of+life+is"><b><code>gpt2:</code> ask real GPT-2</b></a><br>
+<a href="https://github.com/Bobliuuu/readme-lm/issues/new?template=qa.md&title=qa%3A+what+is+qwentpu"><b><code>qa:</code> ask the GitHub model</b></a><br>
+[**what is qwentpu**](https://github.com/Bobliuuu/Bobliuuu/issues/new?title=ask%3A+what+is+qwentpu&body=Just+hit+Submit.+A+GitHub+Action+runs+the+model+stored+in+the+profile+README+and+replies+with+the+answer.)</td>
+<td width="33%" valign="top"><img src="assets/demo-2.svg" alt="Demo 2" width="100%"><br>
+<a href="https://github.com/Bobliuuu/readme-lm/blob/main/demos/mediawiki/README.mediawiki"><b>open the MediaWiki net</b></a><br>
+<a href="https://github.com/Bobliuuu/readme-lm/issues/new?template=mediawiki.md&title=mediawiki%3A+hello"><b><code>mediawiki:</code> run it on your text</b></a></td>
+<td width="33%" valign="top"><img src="assets/demo-3.svg" alt="Demo 3" width="100%"><br>
+<b>Coming up:</b> <code>svg: &lt;text&gt;</code> issues will answer with an SVG-filter network drawn inline.</td>
+</tr>
+</table>
 
-**Two models, on purpose.**
+**Or ask the profile bot directly**, then hit Submit: [**what is qwentpu**](https://github.com/Bobliuuu/Bobliuuu/issues/new?title=ask%3A+what+is+qwentpu&body=Just+hit+Submit.+A+GitHub+Action+runs+the+model+stored+in+the+profile+README+and+replies+with+the+answer.) · [**which repo runs doom inside qwen**](https://github.com/Bobliuuu/Bobliuuu/issues/new?title=ask%3A+which+repo+runs+doom+inside+qwen&body=Just+hit+Submit.+A+GitHub+Action+runs+the+model+stored+in+the+profile+README+and+replies+with+the+answer.) · [**what is the ten percent challenge**](https://github.com/Bobliuuu/Bobliuuu/issues/new?title=ask%3A+what+is+the+ten+percent+challenge&body=Just+hit+Submit.+A+GitHub+Action+runs+the+model+stored+in+the+profile+README+and+replies+with+the+answer.) · [**what language is allgit written in**](https://github.com/Bobliuuu/Bobliuuu/issues/new?title=ask%3A+what+language+is+allgit+written+in&body=Just+hit+Submit.+A+GitHub+Action+runs+the+model+stored+in+the+profile+README+and+replies+with+the+answer.) · [**where does jerry study**](https://github.com/Bobliuuu/Bobliuuu/issues/new?title=ask%3A+where+does+jerry+study&body=Just+hit+Submit.+A+GitHub+Action+runs+the+model+stored+in+the+profile+README+and+replies+with+the+answer.) · [**what is qweninqwen**](https://github.com/Bobliuuu/Bobliuuu/issues/new?title=ask%3A+what+is+qweninqwen&body=Just+hit+Submit.+A+GitHub+Action+runs+the+model+stored+in+the+profile+README+and+replies+with+the+answer.)
 
-- **In this README:** a 600K-parameter character-level transformer (3 layers, 4-bit weights, base64), the collapsed block at the bottom of this page, trained on question/answer pairs from my public repos. It is tiny: short answers, slips on phrasings it hasn't seen, no general knowledge. It is the only model that physically fits in one README (GitHub renders 500 KiB at most).
-- **Real GPT-2** (OpenAI's pretrained 124M weights, quantized to int8) is stored as Markdown files in [**readme-lm**](https://github.com/Bobliuuu/readme-lm). [**`gpt2:` ask it anything**](https://github.com/Bobliuuu/readme-lm/issues/new?template=gpt2.md&title=gpt2%3A+The+meaning+of+life+is) or [**`qa:` ask the GitHub model**](https://github.com/Bobliuuu/readme-lm/issues/new?template=qa.md&title=qa%3A+what+is+qwentpu) (a GitHub Action runs the matching executable Markdown document and replies with an animation), or [**click through its real predictions with no Action**](https://github.com/Bobliuuu/readme-lm/blob/main/graph/gpt2/README.md): precomputed link graphs of GPT-2's top next tokens, plus [the QA model as a click-through graph](https://github.com/Bobliuuu/readme-lm/blob/main/graph/qa/README.md).
+Or write your own: open an issue titled `ask: <your question>`. The Action loads a **600K-parameter character-level transformer** (3 layers, 4-bit weights, base64) straight out of this README, runs it in numpy, replies and updates the animation above. It only knows Jerry's public GitHub; anything else gets a polite refusal. It is tiny, so expect short answers; it is the only model that physically fits in one README (GitHub renders 500 KiB at most).
 
-GitHub's renderer cannot compute anything, so a GPT-2 forward pass can't run live inside a README; the click-through pages are navigation of precomputed predictions. Details and measurements are in the repo.
+<details><summary><b>Demo 1 in motion: real GPT-2, token by token</b></summary>
 
-## Background
+<img src="assets/gpt2-generation.gif" alt="Real GPT-2 generating text token by token" width="100%">
+
+Real GPT-2 (OpenAI's pretrained 124M weights, int8) is stored as Markdown files in [**readme-lm**](https://github.com/Bobliuuu/readme-lm). [**Click through its real predictions with no Action**](https://github.com/Bobliuuu/readme-lm/blob/main/graph/gpt2/README.md): precomputed link graphs of GPT-2's top next tokens, plus [the QA model as a click-through graph](https://github.com/Bobliuuu/readme-lm/blob/main/graph/qa/README.md). GitHub's renderer cannot compute a GPT-2 forward pass live; those pages are navigation of precomputed predictions. Details and measurements are in the repo.
+
+</details>
+
+<img src="assets/hdr-background.svg" alt="Background" width="100%">
 
 - **Industry**: StackAdapt, Super.com (data eng), Aview, OPENLANE (SRE), Aviato (founding ML), Sysconverge
 - **Community**: AWS Cloud Club captain (Canada's first), Waterloo Data Science Club VP, CS Club, TEDxUW tech lead
 - **Competitions**: USACO Gold · Codingame Master (top 0.5%) · Kaggle Competition Expert · Hack the North finalist · picoCTF top 5 in Canada
 - **Writing**: two IEEE papers (text-to-SQL, imbalanced classification) and a [Rootly study of DeepSeek R1 on error-log classification](https://rootly.com/blog/classifying-error-logs-with-ai-can-deepseek-r1-outperform-gpt-4o-and-llama-3)
 
-## Stack
+<img src="assets/hdr-stack.svg" alt="Stack" width="100%">
 
-![Languages](https://img.shields.io/badge/-Python%20·%20Rust%20·%20Go%20·%20C%2FC%2B%2B%20·%20CUDA%20·%20TypeScript-181717?style=flat-square)
-![Infra](https://img.shields.io/badge/-Kubernetes%20·%20Terraform%20·%20ArgoCD%20·%20AWS%20·%20GCP-181717?style=flat-square)
-![Data](https://img.shields.io/badge/-Snowflake%20·%20dbt%20·%20Airflow%20·%20PyTorch-181717?style=flat-square)
+<img src="assets/stack.svg" alt="Stack. Languages: Python, Rust, Go, C/C++, CUDA, TypeScript. Infra: Kubernetes, Terraform, ArgoCD, AWS, GCP. Data and ML: Snowflake, dbt, Airflow, PyTorch." width="100%">
 
-## Off the clock
+<div align="center"><sub>Off the clock: varsity ultimate frisbee 🥏 · a cappella · dance · gardening</sub></div>
 
-Varsity ultimate frisbee 🥏 · a cappella · dance · gardening
+<img src="assets/hdr-menu.svg" alt="No-Action menu" width="100%">
 
-## Ask the model with no Action (pure Markdown)
+**Ask the model with no Action (pure Markdown).**
 
 This is the 4-bit transformer's behavior **precomputed into links**: pick a question, then click through the answer. Each link spans the run of characters the model is confident about, and a state with several links is a place where the model had real alternatives (probabilities shown). Nothing runs when you click; GitHub just scrolls to the next precomputed state. More questions: [the full graph](https://github.com/Bobliuuu/readme-lm/blob/main/graph/qa/README.md).
 
