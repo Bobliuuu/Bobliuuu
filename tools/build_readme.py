@@ -42,28 +42,25 @@ head = f'''<div align="center">
 <img src="assets/hdr-interactive.svg" alt="Interactive" width="100%">
 
 <div align="center">
-<img src="assets/readme-lm.svg?v=337291d3" alt="Terminal animation of a tiny transformer answering a question about Jerry's GitHub" width="640">
+<img src="assets/readme-lm.svg?v=337291d3" alt="Animation of the latest result: a language model answering the latest issue" width="640">
 </div>
 
-**README-LM: neural networks you can talk to from a README.** Three demos. Open an issue and a GitHub Action runs the network and replies. The profile bot's weights are in this very file, in the collapsed block at the bottom.
+**README-LM: neural networks you can talk to from a README.** Open an issue and replace `example text` in the title with anything you like. A GitHub Action runs the network, and **the animation above changes to show the answer**.
 
 <table>
 <tr>
 <td width="33%" valign="top"><img src="assets/demo-1.svg" alt="Demo 1" width="100%"><br>
-<a href="https://github.com/Bobliuuu/readme-lm/issues/new?template=gpt2.md&title=gpt2%3A+The+meaning+of+life+is"><b><code>gpt2:</code> ask real GPT-2</b></a><br>
-<a href="https://github.com/Bobliuuu/readme-lm/issues/new?template=qa.md&title=qa%3A+what+is+qwentpu"><b><code>qa:</code> ask the GitHub model</b></a><br>
-{ask_html("what is qwentpu")}</td>
+<a href="https://github.com/Bobliuuu/Bobliuuu/issues/new?template=gpt2.md&title=gpt2%3A+example+text"><b><code>gpt2:</code> example text</b></a><br>
+<a href="https://github.com/Bobliuuu/Bobliuuu/issues/new?template=qa.md&title=qa%3A+example+text"><b><code>qa:</code> example text</b></a></td>
 <td width="33%" valign="top"><img src="assets/demo-2.svg" alt="Demo 2" width="100%"><br>
-<a href="https://github.com/Bobliuuu/readme-lm/blob/main/demos/mediawiki/README.mediawiki"><b>open the MediaWiki net</b></a><br>
-<a href="{rl("mediawiki", "mediawiki", "hello")}"><b><code>mediawiki:</code> run it on your text</b></a></td>
+<a href="https://github.com/Bobliuuu/Bobliuuu/issues/new?template=mediawiki.md&title=mediawiki%3A+example+text"><b><code>mediawiki:</code> example text</b></a><br>
+<a href="https://github.com/Bobliuuu/Bobliuuu/blob/main/demos/mediawiki/README.mediawiki">latest MediaWiki page</a></td>
 <td width="33%" valign="top"><img src="assets/demo-3.svg" alt="Demo 3" width="100%"><br>
-<b>Coming up:</b> <code>svg: &lt;text&gt;</code> issues will answer with an SVG-filter network drawn inline.</td>
+<b>Coming up:</b> <code>svg: example text</code> will make the animation above a neural net that your own browser computes.</td>
 </tr>
 </table>
 
-**Or ask the profile bot directly**, then hit Submit: {ask("what is qwentpu")} · {ask("which repo runs doom inside qwen")} · {ask("what is the ten percent challenge")} · {ask("what language is allgit written in")} · {ask("where does jerry study")} · {ask("what is qweninqwen")}
-
-Or write your own: open an issue titled `ask: <your question>`. The Action loads a **600K-parameter character-level transformer** (3 layers, 4-bit weights, base64) straight out of this README, runs it in numpy, replies and updates the animation above. It only knows Jerry's public GitHub; anything else gets a polite refusal. It is tiny, so expect short answers; it is the only model that physically fits in one README (GitHub renders 500 KiB at most).
+`gpt2:` runs real GPT-2 small (124M parameters, stored as Markdown files in [readme-lm](https://github.com/Bobliuuu/readme-lm)) and continues your text. `qa:` runs a **600K-parameter character-level transformer** (3 layers, 4-bit weights) whose weights sit inside this very README, in the collapsed block at the bottom; it only knows Jerry's public GitHub, and anything else gets a polite refusal. `mediawiki:` writes your text into a [MediaWiki page](https://github.com/Bobliuuu/Bobliuuu/blob/main/demos/mediawiki/README.mediawiki) whose arithmetic GitHub's own renderer does. It is tiny, so expect short answers; the QA model is the only one that physically fits in one README (GitHub renders 500 KiB at most).
 
 <details><summary><b>Demo 1 in motion: real GPT-2, token by token</b></summary>
 
