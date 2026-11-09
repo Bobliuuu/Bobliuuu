@@ -1,1 +1,5 @@
 blank_issues_enabled: true
+contact_links:
+  - name: How it works (README-LM explainer)
+    url: https://github.com/Bobliuuu/readme-lm
+    about: Architecture, diagrams, measurements and what was tried to run language models from a README.
