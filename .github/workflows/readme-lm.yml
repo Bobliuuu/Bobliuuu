@@ -34,7 +34,9 @@ jobs:
       - name: commit animation
         run: |
           git config user.name "readme-lm[bot]"; git config user.email "readme-lm@users.noreply.github.com"
-          git add assets/readme-lm.svg
+          H=$(sha1sum assets/readme-lm.svg | cut -c1-8)
+          sed -i -E "s#assets/readme-lm\.svg(\?v=[0-9a-f]+)?#assets/readme-lm.svg?v=${H}#" README.md
+          git add assets/readme-lm.svg README.md
           if ! git diff --cached --quiet; then git commit -m "chore: regenerate README-LM answer"; git pull --rebase -q; git push; fi
       - name: reply and close
         if: github.event_name == 'issues'

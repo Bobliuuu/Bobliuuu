@@ -33,14 +33,14 @@
 ## README-LM: ask a neural network that lives in this README
 
 <div align="center">
-<img src="assets/readme-lm.svg" alt="Terminal animation of a tiny transformer answering a question about Jerry's GitHub" width="640">
+<img src="assets/readme-lm.svg?v=337291d3" alt="Terminal animation of a tiny transformer answering a question about Jerry's GitHub" width="640">
 </div>
 
 **Click a question, hit Submit, get an answer:** [**what is qwentpu**](https://github.com/Bobliuuu/Bobliuuu/issues/new?title=ask%3A+what+is+qwentpu&body=Just+hit+Submit.+A+GitHub+Action+runs+the+model+stored+in+the+profile+README+and+replies+with+the+answer.) · [**which repo runs doom inside qwen**](https://github.com/Bobliuuu/Bobliuuu/issues/new?title=ask%3A+which+repo+runs+doom+inside+qwen&body=Just+hit+Submit.+A+GitHub+Action+runs+the+model+stored+in+the+profile+README+and+replies+with+the+answer.) · [**what is the ten percent challenge**](https://github.com/Bobliuuu/Bobliuuu/issues/new?title=ask%3A+what+is+the+ten+percent+challenge&body=Just+hit+Submit.+A+GitHub+Action+runs+the+model+stored+in+the+profile+README+and+replies+with+the+answer.) · [**what language is allgit written in**](https://github.com/Bobliuuu/Bobliuuu/issues/new?title=ask%3A+what+language+is+allgit+written+in&body=Just+hit+Submit.+A+GitHub+Action+runs+the+model+stored+in+the+profile+README+and+replies+with+the+answer.) · [**where does jerry study**](https://github.com/Bobliuuu/Bobliuuu/issues/new?title=ask%3A+where+does+jerry+study&body=Just+hit+Submit.+A+GitHub+Action+runs+the+model+stored+in+the+profile+README+and+replies+with+the+answer.) · [**what is qweninqwen**](https://github.com/Bobliuuu/Bobliuuu/issues/new?title=ask%3A+what+is+qweninqwen&body=Just+hit+Submit.+A+GitHub+Action+runs+the+model+stored+in+the+profile+README+and+replies+with+the+answer.)
 
 Or write your own: open an issue titled `ask: <your question>`. A GitHub Action loads the model **straight out of this README**, runs the transformer in numpy, replies, and updates the animation above. It only knows Jerry's public GitHub (repos, projects, stack); anything else gets a polite refusal.
 
-The model is the collapsed block at the bottom of this page: a 600K-parameter character-level transformer (3 layers, 4-bit weights, base64), trained on question/answer pairs written from my public repos' READMEs. It is tiny, so expect short answers, occasional slips on phrasings it hasn't seen, and no general knowledge. Code and training: [**readme-lm**](https://github.com/Bobliuuu/readme-lm).
+The model is the collapsed block at the bottom of this page: a 600K-parameter character-level transformer (3 layers, 4-bit weights, base64), trained on question/answer pairs written from my public repos' READMEs. It is tiny, so expect short answers, occasional slips on phrasings it hasn't seen, and no general knowledge. Want to ask *anything*? [**Ask GPT-2 (124M, stored as Markdown files)**](https://github.com/Bobliuuu/readme-lm/issues/new?template=gpt2.md&title=gpt2%3A+The+meaning+of+life+is). Code and training: [**readme-lm**](https://github.com/Bobliuuu/readme-lm).
 
 ## Background
 
