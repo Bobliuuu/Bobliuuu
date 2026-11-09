@@ -51,6 +51,8 @@
 </tr>
 </table>
 
+If an issue form opens empty, just start a new issue and type the title yourself: `gpt2: <text>`, `qa: <question>`, `mediawiki: <text>` or `svg: <text>`; only the title matters.
+
 `gpt2:` runs real GPT-2 small (124M parameters, stored as Markdown files in [readme-lm](https://github.com/Bobliuuu/readme-lm)) and continues your text. `qa:` runs a **600K-parameter character-level transformer** (3 layers, 4-bit weights) whose weights sit inside this very README, in the collapsed block at the bottom; it only knows Jerry's public GitHub, and anything else gets a polite refusal. `mediawiki:` writes your text into a [MediaWiki page](https://github.com/Bobliuuu/Bobliuuu/blob/main/demos/mediawiki/README.mediawiki) whose arithmetic GitHub's own renderer does. `svg:` writes your text into a neural net drawn as SVG filters; Chrome's filter engine does every multiply-accumulate (the Action renders it in a headless Chrome and shows the answer above, and the [live network](https://github.com/Bobliuuu/Bobliuuu/blob/main/demos/svg/latest.svg) computes in your own browser at 100% zoom on a non-Retina screen). It is tiny, so expect short answers; the QA model is the only one that physically fits in one README (GitHub renders 500 KiB at most).
 
 <details><summary><b>Demo 1 in motion: real GPT-2, token by token</b></summary>
