@@ -1,0 +1,19 @@
+name: "MediaWiki net: GitHub's renderer does the math"
+description: "A tiny neural net in MediaWiki markup; GitHub's own renderer computes its predictions on your text"
+title: "mediawiki: example text"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## How this works
+        1. Replace `example text` in the **title** above with anything you like, or type it in the box below. Letters, spaces and basic punctuation (up to about 55 characters).
+        2. Click **Submit new issue**.
+        3. A GitHub Action runs the model and **the animation at the top of the profile changes to show the answer**. The bot also replies here and closes this issue (about a minute).
+  - type: input
+    id: text
+    attributes:
+      label: Your text (optional)
+      description: "If you fill this in, it is used instead of the text in the title."
+      placeholder: "example text"
+    validations:
+      required: false

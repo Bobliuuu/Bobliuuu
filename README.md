@@ -40,13 +40,13 @@
 <table>
 <tr>
 <td width="33%" valign="top"><img src="assets/demo-1.svg" alt="Demo 1" width="100%"><br>
-<a href="https://github.com/Bobliuuu/Bobliuuu/issues/new?template=gpt2.md&title=gpt2%3A+example+text"><b><code>gpt2:</code> example text</b></a><br>
-<a href="https://github.com/Bobliuuu/Bobliuuu/issues/new?template=qa.md&title=qa%3A+example+text"><b><code>qa:</code> example text</b></a></td>
+<a href="https://github.com/Bobliuuu/Bobliuuu/issues/new?template=gpt2.yml&title=gpt2%3A+example+text"><b><code>gpt2:</code> example text</b></a><br>
+<a href="https://github.com/Bobliuuu/Bobliuuu/issues/new?template=qa.yml&title=qa%3A+example+text"><b><code>qa:</code> example text</b></a></td>
 <td width="33%" valign="top"><img src="assets/demo-2.svg" alt="Demo 2" width="100%"><br>
-<a href="https://github.com/Bobliuuu/Bobliuuu/issues/new?template=mediawiki.md&title=mediawiki%3A+example+text"><b><code>mediawiki:</code> example text</b></a><br>
+<a href="https://github.com/Bobliuuu/Bobliuuu/issues/new?template=mediawiki.yml&title=mediawiki%3A+example+text"><b><code>mediawiki:</code> example text</b></a><br>
 <a href="https://github.com/Bobliuuu/Bobliuuu/blob/main/demos/mediawiki/README.mediawiki">latest MediaWiki page</a></td>
 <td width="33%" valign="top"><img src="assets/demo-3.svg" alt="Demo 3" width="100%"><br>
-<a href="https://github.com/Bobliuuu/Bobliuuu/issues/new?template=svg.md&title=svg%3A+example+text"><b><code>svg:</code> example text</b></a><br>
+<a href="https://github.com/Bobliuuu/Bobliuuu/issues/new?template=svg.yml&title=svg%3A+example+text"><b><code>svg:</code> example text</b></a><br>
 <a href="https://github.com/Bobliuuu/Bobliuuu/blob/main/demos/svg/latest.svg">latest SVG net (live)</a></td>
 </tr>
 </table>

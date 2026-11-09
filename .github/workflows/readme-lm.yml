@@ -20,6 +20,7 @@ jobs:
       GH_TOKEN: ${{ github.token }}
       EVENT: ${{ github.event_name }}
       TITLE: ${{ github.event.issue.title }}
+      ISSUE_BODY: ${{ github.event.issue.body }}
       ISSUE: ${{ github.event.issue.number }}
       IN_MODE: ${{ inputs.mode }}
       IN_TEXT: ${{ inputs.text }}
@@ -38,6 +39,10 @@ jobs:
             case "$TITLE" in gpt2:*) MODE=gpt2; P="${TITLE#gpt2:}";; mediawiki:*) MODE=mediawiki; P="${TITLE#mediawiki:}";; svg:*) MODE=svg; P="${TITLE#svg:}";; *) MODE=qa; P="${TITLE#qa:}";; esac; SEED="$ISSUE"; N="$ISSUE"
           elif [ "$EVENT" = workflow_dispatch ]; then MODE="$IN_MODE"; P="$IN_TEXT"; SEED="$RUNNUM"; N="run$RUNNUM"
           else MODE=qa; P=""; SEED="$RUNNUM"; N="cron$RUNNUM"; fi
+          if [ "$EVENT" = issues ]; then
+            FIELD="$(printf '%s\n' "$ISSUE_BODY" | tr -d '\r' | awk '/^### Your text/{f=1;next} f&&NF{print;exit}')"
+            case "$FIELD" in ""|"_No response_") ;; *) P="$FIELD";; esac
+          fi
           P="$(printf '%s' "$P" | tr -d '\r\n`' | sed 's/^ *//; s/ *$//' | cut -c1-200)"
           { echo "MODE=$MODE"; echo "SEED=$SEED"; echo "N=$N"; } >> "$GITHUB_ENV"
           printf '%s' "$P" | sed 's/@/(at)/g' > prompt.txt
