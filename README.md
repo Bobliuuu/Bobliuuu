@@ -40,7 +40,12 @@
 
 Or write your own: open an issue titled `ask: <your question>`. A GitHub Action loads the model **straight out of this README**, runs the transformer in numpy, replies, and updates the animation above. It only knows Jerry's public GitHub (repos, projects, stack); anything else gets a polite refusal.
 
-The model is the collapsed block at the bottom of this page: a 600K-parameter character-level transformer (3 layers, 4-bit weights, base64), trained on question/answer pairs written from my public repos' READMEs. It is tiny, so expect short answers, occasional slips on phrasings it hasn't seen, and no general knowledge. Want to ask *anything*? [**Ask GPT-2 (124M, stored as Markdown files)**](https://github.com/Bobliuuu/readme-lm/issues/new?template=gpt2.md&title=gpt2%3A+The+meaning+of+life+is). Code and training: [**readme-lm**](https://github.com/Bobliuuu/readme-lm).
+**Two models, on purpose.**
+
+- **In this README:** a 600K-parameter character-level transformer (3 layers, 4-bit weights, base64), the collapsed block at the bottom of this page, trained on question/answer pairs from my public repos. It is tiny: short answers, slips on phrasings it hasn't seen, no general knowledge. It is the only model that physically fits in one README (GitHub renders 500 KiB at most).
+- **Real GPT-2** (OpenAI's pretrained 124M weights, quantized to int8) is stored as Markdown files in [**readme-lm**](https://github.com/Bobliuuu/readme-lm). [**Ask it anything**](https://github.com/Bobliuuu/readme-lm/issues/new?template=gpt2.md&title=gpt2%3A+The+meaning+of+life+is) (a GitHub Action runs it), or [**click through its real predictions with no Action**](https://github.com/Bobliuuu/readme-lm/blob/main/graph/gpt2/README.md): precomputed link graphs of GPT-2's top next tokens, plus [the QA model as a click-through graph](https://github.com/Bobliuuu/readme-lm/blob/main/graph/qa/README.md).
+
+GitHub's renderer cannot compute anything, so a GPT-2 forward pass can't run live inside a README; the click-through pages are navigation of precomputed predictions. Details and measurements are in the repo.
 
 ## Background
 
