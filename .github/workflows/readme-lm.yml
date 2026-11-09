@@ -84,7 +84,7 @@ jobs:
           mkdir -p demos/svg
           python3 rl/demos/svg/gen.py "$(cat prompt.txt)" -o demos/svg/latest.svg > gen.json
           git add demos/svg/latest.svg; git commit -m "chore: svg net for issue $N" || true
-          git pull --rebase -q; git push; echo "SVG_SHA=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+          git pull --rebase -q; git push; SVG_SHA=$(git rev-parse HEAD)
           python3 rl/demos/svg/decode.py "$(cat prompt.txt)" demos/svg/latest.svg > live.json
           rm -f demos/svg/_h.html
           python3 -c "import json;d=json.load(open('live.json'));print('next char per 5-letter window:  '+d['pred'])" > typed.txt
