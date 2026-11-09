@@ -3,7 +3,7 @@ on:
   schedule: [{cron: "17 */3 * * *"}]
   workflow_dispatch:
     inputs:
-      prompt: {description: "prompt", required: false, default: ""}
+      question: {description: "question about Jerry's GitHub", required: false, default: ""}
   issues:
     types: [opened]
 permissions:
@@ -11,31 +11,31 @@ permissions:
   issues: write
 concurrency: readme-lm
 jobs:
-  generate:
-    if: github.event_name != 'issues' || startsWith(github.event.issue.title, 'generate:')
+  answer:
+    if: github.event_name != 'issues' || startsWith(github.event.issue.title, 'ask:')
     runs-on: ubuntu-latest
     env:
       GH_TOKEN: ${{ github.token }}
       EVENT: ${{ github.event_name }}
       TITLE: ${{ github.event.issue.title }}
       ISSUE: ${{ github.event.issue.number }}
-      INPUT: ${{ inputs.prompt }}
+      INPUT: ${{ inputs.question }}
       RUN: ${{ github.run_number }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: {python-version: "3.12"}
       - run: pip install numpy
-      - name: generate (model weights are read from README.md)
+      - name: answer (model weights are read from README.md)
         run: |
-          if [ "$EVENT" = issues ]; then PROMPT="${TITLE#generate:}"; SEED="$ISSUE"; else PROMPT="$INPUT"; SEED="$RUN"; fi
-          python3 readme-lm/gen.py README.md assets/readme-lm.svg "$SEED" "$PROMPT" > out.txt
-          { echo "Prompt: \`$(printf '%s' "$PROMPT" | tr -cd 'A-Za-z0-9 .,')\`"; echo; echo '```'; cat out.txt; echo '```'; echo; echo "Sampled by the neural net stored in this README (int8 weights, numpy forward pass). The animation at the top of the profile now shows this text."; } > comment.md
+          if [ "$EVENT" = issues ]; then Q="${TITLE#ask:}"; SEED="$ISSUE"; else Q="$INPUT"; SEED="$RUN"; fi
+          python3 readme-lm/ask.py README.md assets/readme-lm.svg "$SEED" "$Q" > out.txt
+          { echo "Question: \`$(printf '%s' "$Q" | tr -cd 'A-Za-z0-9 .,?-_')\`"; echo; echo '```'; cat out.txt; echo '```'; echo; echo "Answered by the 4-bit transformer stored inside the profile README (numpy forward pass). It only knows Jerry's public GitHub repos."; } > comment.md
       - name: commit animation
         run: |
           git config user.name "readme-lm[bot]"; git config user.email "readme-lm@users.noreply.github.com"
           git add assets/readme-lm.svg
-          if ! git diff --cached --quiet; then git commit -m "chore: regenerate README-LM sample"; git pull --rebase -q; git push; fi
+          if ! git diff --cached --quiet; then git commit -m "chore: regenerate README-LM answer"; git pull --rebase -q; git push; fi
       - name: reply and close
         if: github.event_name == 'issues'
         run: |
