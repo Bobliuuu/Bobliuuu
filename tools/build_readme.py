@@ -50,13 +50,13 @@ head = f'''<div align="center">
 <table>
 <tr>
 <td width="33%" valign="top"><img src="assets/demo-1.svg" alt="Demo 1" width="100%"><br>
-<a href="https://github.com/Bobliuuu/Bobliuuu/issues/new?template=gpt2.yml&title=gpt2%3A+example+text"><b><code>gpt2:</code> example text</b></a><br>
-<a href="https://github.com/Bobliuuu/Bobliuuu/issues/new?template=qa.yml&title=qa%3A+example+text"><b><code>qa:</code> example text</b></a></td>
+<a href="https://github.com/Bobliuuu/Bobliuuu/issues/new?template=gpt2.md&title=gpt2%3A+example+text&body=This%20will%20run%20an%20Action%20on%20%2A%2Areal%20GPT-2%20small%20%28124M%20parameters%29%2A%2A%20and%20update%20the%20animation%20at%20the%20top%20of%20the%20profile%20with%20its%20continuation%20of%20your%20text.%0A%0AReplace%20%60example%20text%60%20in%20the%20title%20above%20with%20anything%20you%20like%20%28a%20sentence%20to%20continue%29.%20You%20can%20leave%20this%20box%20as%20is."><b><code>gpt2:</code> example text</b></a><br>
+<a href="https://github.com/Bobliuuu/Bobliuuu/issues/new?template=qa.md&title=qa%3A+example+text&body=This%20will%20run%20an%20Action%20on%20a%20%2A%2A600K-parameter%20QA%20model%2A%2A%20%28its%20weights%20are%20stored%20inside%20the%20profile%20README%29%20and%20update%20the%20animation%20at%20the%20top%20of%20the%20profile%20with%20its%20answer.%0A%0AReplace%20%60example%20text%60%20in%20the%20title%20above%20with%20your%20question%20about%20Jerry%27s%20GitHub.%20You%20can%20leave%20this%20box%20as%20is."><b><code>qa:</code> example text</b></a></td>
 <td width="33%" valign="top"><img src="assets/demo-2.svg" alt="Demo 2" width="100%"><br>
-<a href="https://github.com/Bobliuuu/Bobliuuu/issues/new?template=mediawiki.yml&title=mediawiki%3A+example+text"><b><code>mediawiki:</code> example text</b></a><br>
+<a href="https://github.com/Bobliuuu/Bobliuuu/issues/new?template=mediawiki.md&title=mediawiki%3A+example+text&body=This%20will%20write%20your%20text%20into%20a%20%2A%2AMediaWiki%20page%20that%20GitHub%27s%20own%20renderer%20computes%2A%2A%20with%20a%20tiny%20neural%20net%2C%20and%20update%20the%20animation%20at%20the%20top%20of%20the%20profile%20with%20the%20result.%0A%0AReplace%20%60example%20text%60%20in%20the%20title%20above%20with%20letters%2C%20spaces%20and%20basic%20punctuation%20%28up%20to%20about%2055%20characters%29.%20You%20can%20leave%20this%20box%20as%20is."><b><code>mediawiki:</code> example text</b></a><br>
 <a href="https://github.com/Bobliuuu/Bobliuuu/blob/main/demos/mediawiki/README.mediawiki">latest MediaWiki page</a></td>
 <td width="33%" valign="top"><img src="assets/demo-3.svg" alt="Demo 3" width="100%"><br>
-<a href="https://github.com/Bobliuuu/Bobliuuu/issues/new?template=svg.yml&title=svg%3A+example+text"><b><code>svg:</code> example text</b></a><br>
+<a href="https://github.com/Bobliuuu/Bobliuuu/issues/new?template=svg.md&title=svg%3A+example+text&body=This%20will%20write%20your%20text%20into%20a%20%2A%2Atiny%20neural%20net%20drawn%20as%20SVG%20filters%2A%2A%2C%20compute%20it%20in%20Chrome%27s%20filter%20engine%2C%20and%20update%20the%20animation%20at%20the%20top%20of%20the%20profile%20with%20the%20result.%0A%0AReplace%20%60example%20text%60%20in%20the%20title%20above%20with%20letters%2C%20spaces%20and%20basic%20punctuation%20%28up%20to%2096%20characters%29.%20You%20can%20leave%20this%20box%20as%20is."><b><code>svg:</code> example text</b></a><br>
 <a href="https://github.com/Bobliuuu/Bobliuuu/blob/main/demos/svg/latest.svg">latest SVG net (live)</a></td>
 </tr>
 </table>
