@@ -32,7 +32,7 @@
 <img src="assets/hdr-interactive.svg" alt="Interactive" width="100%">
 
 <div align="center">
-<img src="assets/readme-lm.svg?v=fd50180c" alt="Animation of the latest result: a language model answering the latest issue" width="640">
+<img src="assets/readme-lm.svg?v=02d039f4" alt="Animation of the latest result: a language model answering the latest issue" width="640">
 </div>
 
 **README-LM: neural networks you can talk to from a README.** Open an issue and replace `example text` in the title with anything you like. A GitHub Action runs the network, and **the animation above changes to show the answer**.
