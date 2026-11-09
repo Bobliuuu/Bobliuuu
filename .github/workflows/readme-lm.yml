@@ -5,8 +5,6 @@ on:
     inputs:
       mode: {description: "gpt2, qa, mediawiki or svg", required: false, default: "qa"}
       text: {description: "input text", required: false, default: ""}
-  issues:
-    types: [opened]
 permissions:
   contents: write
   issues: write
