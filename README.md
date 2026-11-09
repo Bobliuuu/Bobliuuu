@@ -40,13 +40,13 @@
 <table>
 <tr>
 <td width="33%" valign="top"><img src="assets/demo-1.svg" alt="Demo 1" width="100%"><br>
-<a href="https://github.com/Bobliuuu/readme-lm/issues/new?title=gpt2%3A+example+text&body=Just+hit+Submit.+A+GitHub+Action+runs+real+GPT-2+small+%28124M%29+on+the+text+after+the+colon+in+the+title%2C+then+updates+the+profile+animation.+Replace+%60example+text%60+in+the+title+with+your+own+text+first."><b><code>gpt2:</code> example text</b></a><br>
-<a href="https://github.com/Bobliuuu/readme-lm/issues/new?title=qa%3A+example+text&body=Just+hit+Submit.+A+GitHub+Action+runs+the+600K-parameter+QA+model+stored+inside+the+profile+README+and+updates+the+profile+animation+with+its+answer.+Replace+%60example+text%60+in+the+title+with+a+question+about+Jerry%27s+GitHub+first."><b><code>qa:</code> example text</b></a></td>
+<a href="https://www.github.com/Bobliuuu/readme-lm/issues/new?title=gpt2%3A+example+text&body=Just+hit+Submit.+A+GitHub+Action+runs+real+GPT-2+small+%28124M%29+on+the+text+after+the+colon+in+the+title%2C+then+updates+the+profile+animation.+Replace+%60example+text%60+in+the+title+with+your+own+text+first."><b><code>gpt2:</code> example text</b></a><br>
+<a href="https://www.github.com/Bobliuuu/readme-lm/issues/new?title=qa%3A+example+text&body=Just+hit+Submit.+A+GitHub+Action+runs+the+600K-parameter+QA+model+stored+inside+the+profile+README+and+updates+the+profile+animation+with+its+answer.+Replace+%60example+text%60+in+the+title+with+a+question+about+Jerry%27s+GitHub+first."><b><code>qa:</code> example text</b></a></td>
 <td width="33%" valign="top"><img src="assets/demo-2.svg" alt="Demo 2" width="100%"><br>
-<a href="https://github.com/Bobliuuu/readme-lm/issues/new?title=mediawiki%3A+example+text&body=Just+hit+Submit.+A+GitHub+Action+writes+your+text+into+a+MediaWiki+page+whose+math+GitHub%27s+own+renderer+computes%2C+then+updates+the+profile+animation.+Replace+%60example+text%60+in+the+title+first."><b><code>mediawiki:</code> example text</b></a><br>
+<a href="https://www.github.com/Bobliuuu/readme-lm/issues/new?title=mediawiki%3A+example+text&body=Just+hit+Submit.+A+GitHub+Action+writes+your+text+into+a+MediaWiki+page+whose+math+GitHub%27s+own+renderer+computes%2C+then+updates+the+profile+animation.+Replace+%60example+text%60+in+the+title+first."><b><code>mediawiki:</code> example text</b></a><br>
 <a href="https://github.com/Bobliuuu/Bobliuuu/blob/main/demos/mediawiki/README.mediawiki">latest MediaWiki page</a></td>
 <td width="33%" valign="top"><img src="assets/demo-3.svg" alt="Demo 3" width="100%"><br>
-<a href="https://github.com/Bobliuuu/readme-lm/issues/new?title=svg%3A+example+text&body=Just+hit+Submit.+A+GitHub+Action+writes+your+text+into+a+neural+net+drawn+as+SVG+filters%2C+renders+it+in+Chrome%2C+and+updates+the+profile+animation.+Replace+%60example+text%60+in+the+title+first."><b><code>svg:</code> example text</b></a><br>
+<a href="https://www.github.com/Bobliuuu/readme-lm/issues/new?title=svg%3A+example+text&body=Just+hit+Submit.+A+GitHub+Action+writes+your+text+into+a+neural+net+drawn+as+SVG+filters%2C+renders+it+in+Chrome%2C+and+updates+the+profile+animation.+Replace+%60example+text%60+in+the+title+first."><b><code>svg:</code> example text</b></a><br>
 <a href="https://github.com/Bobliuuu/Bobliuuu/blob/main/demos/svg/latest.svg">latest SVG net (live)</a></td>
 </tr>
 </table>
