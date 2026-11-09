@@ -1,12 +1,12 @@
 ---
-name: "SVG net: your browser does the math (coming soon)"
-about: A tiny neural net drawn as SVG filters that your own browser computes; still being built
+name: "SVG net: a filter network Chrome computes"
+about: A tiny neural net drawn as SVG filters; Chrome's filter engine computes its predictions on your text
 title: "svg: example text"
 ---
 
 ## How this works
 
-1. Replace `example text` in the **title** above with anything you like. Letters, spaces and basic punctuation.
+1. Replace `example text` in the **title** above with anything you like. Letters, spaces and basic punctuation (up to 96 characters).
 2. Click **Submit new issue**.
 3. A GitHub Action runs the model and **the animation at the top of the profile changes to show the answer**. The bot also replies here and closes this issue (about a minute).
 

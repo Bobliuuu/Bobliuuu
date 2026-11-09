@@ -122,7 +122,7 @@ CARDS = [
 DEMOS = [
  ("demo-1", "1 / real gpt-2 + qa model", "Real GPT-2 (124M, int8) and the 600K QA model, run by a GitHub Action from Markdown files. Open an issue, get an animated answer."),
  ("demo-2", "2 / pure mediawiki", "A neural net written in pure MediaWiki markup. GitHub's own renderer does the arithmetic."),
- ("demo-3", "3 / svg filters", "A neural net drawn inline as an SVG filter. Coming up."),
+ ("demo-3", "3 / svg filters", "A neural net drawn as SVG filters. Chrome's filter engine does the math."),
 ]
 
 if __name__ == "__main__":

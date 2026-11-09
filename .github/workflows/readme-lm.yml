@@ -31,7 +31,7 @@ jobs:
         with: {repository: Bobliuuu/readme-lm, path: rl}
       - uses: actions/setup-python@v5
         with: {python-version: "3.12"}
-      - run: pip install numpy regex pillow
+      - run: pip install numpy regex pillow playwright
       - name: parse the issue title
         run: |
           if [ "$EVENT" = issues ]; then
@@ -78,12 +78,23 @@ jobs:
           python3 -c "import json;print('next char per 2-letter window:  ' + json.load(open('live.json'))['text'])" > typed.txt
           python3 rl/gpt2/render_svg.py assets/readme-lm.svg "$(python3 -c "import json;print(json.load(open('gen.json'))['input'])")" typed.txt "MediaWiki net - computed live by GitHub's renderer" mediawiki
           { echo "These next-character predictions were **computed by GitHub's own MediaWiki renderer** when it rendered [the generated page](https://github.com/${GITHUB_REPOSITORY}/blob/${PAGE_SHA}/demos/mediawiki/README.mediawiki). The Action only wrote your text into the page and read the rendered result."; echo; echo '```'; cat typed.txt; echo '```'; echo; echo "_Summary:_ \`$(sed 's/@/(at)/g; s/`//g' gen.json)\`"; } > body.md
-      - name: svg (a filter network your browser computes)
+      - name: svg (a filter network that Chrome's filter engine computes)
         if: env.MODE == 'svg'
         run: |
-          test -f rl/demos/svg/gen.py || { echo "the svg demo is not available yet"; exit 1; }
-          python3 rl/demos/svg/gen.py "$(cat prompt.txt)" -o assets/readme-lm.svg > gen.json
-          { echo "The picture is an SVG filter network. **Your browser's filter engine does every multiply-accumulate**; the Action only wrote your text into the file. It is valid in Chrome at 1x pixel ratio."; echo; echo "_Summary:_ \`$(sed 's/@/(at)/g; s/`//g' gen.json)\`"; } > body.md
+          mkdir -p demos/svg
+          python3 rl/demos/svg/gen.py "$(cat prompt.txt)" -o demos/svg/latest.svg > gen.json
+          git add demos/svg/latest.svg; git commit -m "chore: svg net for issue $N" || true
+          git pull --rebase -q; git push; echo "SVG_SHA=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+          python3 rl/demos/svg/decode.py "$(cat prompt.txt)" demos/svg/latest.svg > live.json
+          rm -f demos/svg/_h.html
+          python3 -c "import json;d=json.load(open('live.json'));print('next char per 5-letter window:  '+d['pred'])" > typed.txt
+          python3 rl/gpt2/render_svg.py assets/readme-lm.svg "$(python3 -c "import json;print(json.load(open('gen.json'))['input'])")" typed.txt "SVG net - computed by Chrome's filter engine" svg
+          RAW="https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/${SVG_SHA}/demos/svg/latest.svg"
+          { echo "These next-character predictions were drawn by an **SVG filter network**: every multiply-accumulate is a filter primitive, computed by Chrome's filter engine (here on the Action's headless Chrome; the Action only wrote your text into the SVG and read the pixels back)."; echo
+            echo '```'; cat typed.txt; echo '```'; echo
+            echo "The live network is below. **Your own browser computes it**, but it is only correct at 100% zoom on a non-Retina display in a Chrome-based browser. [Open the SVG]($RAW)."; echo
+            echo "<img src=\"$RAW\" width=\"624\" alt=\"SVG filter neural network\">"; echo
+            echo "_Summary:_ \`$(sed 's/@/(at)/g; s/`//g' live.json)\`"; } > body.md
       - name: update the README animation, commit, and pin it to a commit
         run: |
           H=$(sha1sum assets/readme-lm.svg | cut -c1-8)
