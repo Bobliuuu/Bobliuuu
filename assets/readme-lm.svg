@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="632" height="172" viewBox="0 0 632 172" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">
-<rect width="632" height="172" rx="12" fill="#0d1117" stroke="#30363d"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="632" height="148" viewBox="0 0 632 148" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">
+<rect width="632" height="148" rx="12" fill="#0d1117" stroke="#30363d"/>
 <circle cx="24" cy="22" r="6" fill="#ff5f56"/><circle cx="44" cy="22" r="6" fill="#ffbd2e"/><circle cx="64" cy="22" r="6" fill="#27c93f"/>
 <text x="88" y="27" font-size="12" fill="#8b949e">README-LM · 600K-param transformer · 4-bit · lives in this README</text>
 <text x="28" y="62" font-size="13" fill="#58a6ff">ask&gt; which repo runs doom inside qwen</text>
