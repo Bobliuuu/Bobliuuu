@@ -23,8 +23,8 @@ def hero(theme):
     t = THEMES[theme]; W, H = 960, 300; cw = 10.2; fs = 17
     lines = [  # (y, prompt, text, color, start s, secs)
       (112, "$ whoami", "Jerry Zhu", "name", 0.4, 1.0),
-      (156, "$ cat role.txt", "CS + Pure Math @ Waterloo '27 | data, infra, ML systems", "fg", 2.2, 3.6),
-      (200, "$ ./now --experiments", "a TPU, a RISC-V CPU, DOOM inside stock Qwen weights", "a", 6.6, 3.6),
+      (156, "$ cat role.txt", "CS + Pure Math @ Waterloo '27 | data infra @ Shopify", "fg", 2.2, 3.6),
+      (200, "$ ./now --focus", "inference + kernel engineering, DOOM inside stock Qwen", "a", 6.6, 3.6),
       (244, "$ ask readme", "a neural net lives in this README. ask it below.", "dim", 11.2, 3.2),
     ]
     T = 17.0
@@ -46,7 +46,7 @@ def hero(theme):
     # blinking final cursor
     ly = 244; lx = 36 + len(lines[3][1]) * cw + cw + len(lines[3][2]) * cw + 2
     body.append(f'<rect x="{lx:.1f}" y="{ly-20}" width="{cw}" height="24" fill="{t["a"]}" opacity="0"><animate attributeName="opacity" values="0;0;1;0;1;0;1;0;1;0;0" keyTimes="0;{(11.2+3.2)/T:.4f};{14.5/T:.4f};{15/T:.4f};{15.4/T:.4f};{15.8/T:.4f};{16.2/T:.4f};{16.6/T:.4f};0.99;0.995;1" dur="{T}s" repeatCount="indefinite" calcMode="discrete"/></rect>')
-    return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}" font-family="{MONO}" role="img" aria-label="Terminal animation: Jerry Zhu, CS and Pure Math at Waterloo, software engineer on data, infra and ML systems">
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}" font-family="{MONO}" role="img" aria-label="Terminal animation: Jerry Zhu, CS and Pure Math at Waterloo, data infrastructure at Shopify, inference and kernel engineering">
 <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="{t["a"]}"/><stop offset="1" stop-color="{t["b"]}"/></linearGradient>
 <linearGradient id="sweep" x1="0" x2="1"><stop offset="0" stop-color="{t["a"]}" stop-opacity="0"/><stop offset=".5" stop-color="{t["a"]}"/><stop offset="1" stop-color="{t["b"]}" stop-opacity="0"/></linearGradient>
 <pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="{t["line"]}" opacity=".7"/></pattern>

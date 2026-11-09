@@ -3,10 +3,10 @@
 The QA menu and the weights block are copied through untouched. Usage: python3 tools/build_readme.py ORIG.md > README.md"""
 import sys, urllib.parse as U
 orig = open(sys.argv[1]).read()
-tail = orig[orig.index("## Ask the model with no Action"):]
-tail = tail.replace("## Ask the model with no Action (pure Markdown)", '<img src="assets/hdr-menu.svg" alt="No-Action menu" width="100%">\n\n**Ask the model with no Action (pure Markdown).**', 1)
+tail = orig[orig.index("<!--LM-WEIGHTS-START-->"):]   # only the model's weights block stays in the README (the Action reads it)
 BODY = "&body=Just+hit+Submit.+A+GitHub+Action+runs+the+model+stored+in+the+profile+README+and+replies+with+the+answer."
 def ask(q): return f"[**{q}**](https://github.com/Bobliuuu/Bobliuuu/issues/new?title=ask%3A+{U.quote_plus(q)}{BODY})"
+def ask_html(q): return f'<a href="https://github.com/Bobliuuu/Bobliuuu/issues/new?title=ask%3A+{U.quote_plus(q)}{BODY.replace("&","&amp;")}"><b><code>ask:</code> {q}</b></a>'
 def rl(tpl, pre, text): return f"https://github.com/Bobliuuu/readme-lm/issues/new?template={tpl}.md&title={pre}%3A+{U.quote_plus(text)}"
 cards = [("qwentpu",), ("qwen-os",), ("qwentensor",), ("qweninqwen",), ("ten-percent-challenge",), ("kvm",), ("allgit",), ("bobliu-os",), ("open-flapping-airplanes",), ("readme-lm",)]
 rows = []
@@ -16,9 +16,9 @@ for i in range(0, len(cards), 2):
 cards_html = "<table>\n" + "\n".join(rows) + "\n</table>"
 head = f'''<div align="center">
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg"><img src="assets/hero-light.svg" alt="Terminal animation: Jerry Zhu, CS and Pure Math at Waterloo, software engineer on data, infra and ML systems" width="100%"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg"><img src="assets/hero-light.svg" alt="Terminal animation: Jerry Zhu, CS and Pure Math at Waterloo, data infrastructure at Shopify, inference and kernel engineering" width="100%"></picture>
 
-**CS + Pure Math @ University of Waterloo ('27** · Varsity Ultimate (Open B) · Software engineer on data, infra, and ML systems
+**CS + Pure Math @ University of Waterloo ('27** · Varsity Ultimate (Open B) · Data infrastructure @ Shopify · inference and kernel engineering
 
 [Website](https://jerryzhu.org) · [LinkedIn](https://www.linkedin.com/in/jerryzhu2/) · [Resume](https://jerryzhu.org/ZhuJerryResume.pdf)
 
@@ -26,10 +26,10 @@ head = f'''<div align="center">
 
 <img src="assets/hdr-now.svg" alt="Now" width="100%">
 
-- **Software Engineer @ StackAdapt**: Go, Rails, GraphQL; audience segmentation at million-record scale
-- **Compiling programs into transformer weights**: running real computation (a TPU, a RISC-V CPU, DOOM) inside stock Qwen3.5, no training
-- **Model compression**: the 10% Challenge, fitting a capable LLM into a tenth of its fp16 size
-- **UTMIST** (sparse attention research) · **WAT.ai** (PianoFi) · **WARG** (drone autonomy)
+- **Data Infrastructure @ Shopify**
+- **Inference and kernel engineering**: persistent GPU kernels, speculative decoding, KV-cache compression, and the 10% Challenge (a capable LLM in a tenth of its fp16 size)
+- **Embedded compute inside LLMs**: a TPU, a RISC-V CPU and DOOM running inside stock Qwen3.5 weights, no training
+- **UTMIST** (sparse attention research) · **WAT.ai** (PianoFi) · **CSC** (sysadmin)
 
 <img src="assets/hdr-experiments.svg" alt="Experiments" width="100%">
 
@@ -52,7 +52,7 @@ head = f'''<div align="center">
 <td width="33%" valign="top"><img src="assets/demo-1.svg" alt="Demo 1" width="100%"><br>
 <a href="https://github.com/Bobliuuu/readme-lm/issues/new?template=gpt2.md&title=gpt2%3A+The+meaning+of+life+is"><b><code>gpt2:</code> ask real GPT-2</b></a><br>
 <a href="https://github.com/Bobliuuu/readme-lm/issues/new?template=qa.md&title=qa%3A+what+is+qwentpu"><b><code>qa:</code> ask the GitHub model</b></a><br>
-{ask("what is qwentpu")}</td>
+{ask_html("what is qwentpu")}</td>
 <td width="33%" valign="top"><img src="assets/demo-2.svg" alt="Demo 2" width="100%"><br>
 <a href="https://github.com/Bobliuuu/readme-lm/blob/main/demos/mediawiki/README.mediawiki"><b>open the MediaWiki net</b></a><br>
 <a href="{rl("mediawiki", "mediawiki", "hello")}"><b><code>mediawiki:</code> run it on your text</b></a></td>
@@ -75,7 +75,7 @@ Real GPT-2 (OpenAI's pretrained 124M weights, int8) is stored as Markdown files 
 
 <img src="assets/hdr-background.svg" alt="Background" width="100%">
 
-- **Industry**: StackAdapt, Super.com (data eng), Aview, OPENLANE (SRE), Aviato (founding ML), Sysconverge
+- **Industry**: Shopify (data infra), StackAdapt, Super.com (data eng), Aview, OPENLANE (SRE), Aviato (founding ML), Sysconverge
 - **Community**: AWS Cloud Club captain (Canada's first), Waterloo Data Science Club VP, CS Club, TEDxUW tech lead
 - **Competitions**: USACO Gold · Codingame Master (top 0.5%) · Kaggle Competition Expert · Hack the North finalist · picoCTF top 5 in Canada
 - **Writing**: two IEEE papers (text-to-SQL, imbalanced classification) and a [Rootly study of DeepSeek R1 on error-log classification](https://rootly.com/blog/classifying-error-logs-with-ai-can-deepseek-r1-outperform-gpt-4o-and-llama-3)
