@@ -30,7 +30,7 @@ jobs:
         run: |
           if [ "$EVENT" = issues ]; then Q="${TITLE#ask:}"; SEED="$ISSUE"; else Q="$INPUT"; SEED="$RUN"; fi
           python3 readme-lm/ask.py README.md assets/readme-lm.svg "$SEED" "$Q" > out.txt
-          { echo "Question: \`$(printf '%s' "$Q" | tr -cd 'A-Za-z0-9 .,?-_')\`"; echo; echo '```'; cat out.txt; echo '```'; echo; echo "Answered by the 4-bit transformer stored inside the profile README (numpy forward pass). It only knows Jerry's public GitHub repos."; } > comment.md
+          { echo "Question: \`$(printf '%s' "$Q" | tr -cd 'A-Za-z0-9 .,?_-')\`"; echo; echo '```'; cat out.txt; echo '```'; echo; echo "Answered by the 4-bit transformer stored inside the profile README (numpy forward pass). It only knows Jerry's public GitHub repos."; } > comment.md
       - name: commit animation
         run: |
           git config user.name "readme-lm[bot]"; git config user.email "readme-lm@users.noreply.github.com"
